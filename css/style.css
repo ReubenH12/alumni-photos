@@ -1,0 +1,16 @@
+* {
+    /* margin: 0; */
+    box-sizing: border-box;
+}
+
+#year-list li {
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    width: min-content;
+    transition-duration: 100ms;
+}
+
+#year-list li:hover {
+    scale: 1.1;
+}
