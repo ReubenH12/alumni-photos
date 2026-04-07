@@ -5,6 +5,8 @@ const fileStructure = {
         "1961 3C.jpg",
         "1961 3D.jpg",
         "1961 3E.jpg",
+        "1961 Class Photos.docx",
+        "1961 Class Photos.pdf",
         "1961 Staff.jpg"
     ],
     "1962": [
@@ -20,6 +22,8 @@ const fileStructure = {
         "1962 4C.jpg",
         "1962 4D.jpg",
         "1962 4E.jpg",
+        "1962 Class Photos.docx",
+        "1962 Class Photos.pdf",
         "1962 Staff.jpg"
     ],
     "1963": [
@@ -42,6 +46,8 @@ const fileStructure = {
         "1963 5B.jpg",
         "1963 5C.jpg",
         "1963 5D.jpg",
+        "1963 Class Photos.docx",
+        "1963 Class Photos.pdf",
         "1963 Staff.jpg"
     ],
     "1964": [
@@ -68,6 +74,8 @@ const fileStructure = {
         "1964 5Sp1.jpg",
         "1964 5Sp2.jpg",
         "1964 6B.jpg",
+        "1964 Class Photos.docx",
+        "1964 Class Photos.pdf",
         "1964 Staff.jpg"
     ],
     "1965": [
@@ -100,6 +108,8 @@ const fileStructure = {
         "1965 6B1.jpg",
         "1965 6B2.jpg",
         "1965 6B3.jpg",
+        "1965 Class Photos.docx",
+        "1965 Class Photos.pdf",
         "1965 Staff.jpg"
     ],
     "1966": [
@@ -137,6 +147,8 @@ const fileStructure = {
         "1966 6B1.jpg",
         "1966 6B2.jpg",
         "1966 6B3.jpg",
+        "1966 Class Photos.docx",
+        "1966 Class Photos.pdf",
         "1966 Staff.jpg"
     ],
     "1967": [
@@ -178,6 +190,8 @@ const fileStructure = {
         "1967 6B2.jpg",
         "1967 6B3.jpg",
         "1967 6B4.jpg",
+        "1967 Class Photos.docx",
+        "1967 Class Photos.pdf",
         "1967 Staff.jpg"
     ],
     "1968": [
@@ -222,6 +236,8 @@ const fileStructure = {
         "1968 6B3.jpg",
         "1968 6B4.jpg",
         "1968 6B5.jpg",
+        "1968 Class Photos.docx",
+        "1968 Class Photos.pdf",
         "1968 Staff.jpg"
     ],
     "1969": [
@@ -263,6 +279,8 @@ const fileStructure = {
         "1969 6B4.jpg",
         "1969 6B6.jpg",
         "1969 6B7.jpg",
+        "1969 Class Photos.docx",
+        "1969 Class Photos.pdf",
         "1969 Staff.jpg"
     ],
     "1970": [
@@ -305,6 +323,8 @@ const fileStructure = {
         "1970 6Ty.jpg",
         "1970 7Gd.jpg",
         "1970 7Kg.jpg",
+        "1970 Class Photos.docx",
+        "1970 Class Photos.pdf",
         "1970 Staff.jpg"
     ],
     "1971": [
@@ -355,6 +375,8 @@ const fileStructure = {
         "1971 7Kg.jpg",
         "1971 7Kh.jpg",
         "1971 7Le.jpg",
+        "1971 Class Photos.docx",
+        "1971 Class Photos.pdf",
         "1971 Staff.jpg"
     ],
     "1972": [
@@ -404,6 +426,8 @@ const fileStructure = {
         "1972 7Gd.jpg",
         "1972 7Gy.jpg",
         "1972 7Kh.jpg",
+        "1972 Class Photos.docx",
+        "1972 Class Photos.pdf",
         "1972 Staff.jpg"
     ],
     "1973": [
@@ -464,6 +488,8 @@ const fileStructure = {
         "1973 7Ls.jpg",
         "1973 7Rl.jpg",
         "1973 7th Formers.jpg",
+        "1973 Class Photos.docx",
+        "1973 Class Photos.pdf",
         "1973 Staff.jpg"
     ],
     "1974": [
@@ -518,6 +544,8 @@ const fileStructure = {
         "1974 6Pr.jpg",
         "1974 6Pw.jpg",
         "1974 6Ro.jpg",
+        "1974 Class Photos.docx",
+        "1974 Class Photos.pdf",
         "1974 Staff.jpg"
     ],
     "1975": [
@@ -570,6 +598,8 @@ const fileStructure = {
         "1975 6Ri.jpg",
         "1975 6Ro.jpg",
         "1975 6Tp.jpg",
+        "1975 Class Photos.docx",
+        "1975 Class Photos.pdf",
         "1975 Staff.jpg"
     ],
     "1976": [
@@ -623,6 +653,8 @@ const fileStructure = {
         "1976 6Ri.jpg",
         "1976 6Rs.jpg",
         "1976 6Wi.jpg",
+        "1976 Class Photos.docx",
+        "1976 Class Photos.pdf",
         "1976 Staff.jpg"
     ],
     "1977": [
@@ -672,6 +704,8 @@ const fileStructure = {
         "1977 6Pr.jpg",
         "1977 6Rs.jpg",
         "1977 6Ta.jpg",
+        "1977 Class Photos.docx",
+        "1977 Class Photos.pdf",
         "1977 Staff.jpg"
     ],
     "1978": [
@@ -719,6 +753,8 @@ const fileStructure = {
         "1978 6Le.jpg",
         "1978 6Md.jpg",
         "1978 6Rs.jpg",
+        "1978 Class Photos.docx",
+        "1978 Class Photos.pdf",
         "1978 Staff.jpg"
     ],
     "1979": [
@@ -763,6 +799,8 @@ const fileStructure = {
         "1979 6Mt.jpg",
         "1979 6Pr.jpg",
         "1979 6Rs.jpg",
+        "1979 Class Photos.docx",
+        "1979 Class Photos.pdf",
         "1979 Staff.jpg"
     ],
     "1980": [
@@ -806,6 +844,8 @@ const fileStructure = {
         "1980 6Mk.jpg",
         "1980 6Pr.jpg",
         "1980 7th Formers.jpg",
+        "1980 Class Photos.docx",
+        "1980 Class Photos.pdf",
         "1980 Staff.jpg"
     ],
     "1981": [
@@ -818,6 +858,8 @@ const fileStructure = {
         "1981 5Fn.jpg",
         "1981 5Va.jpg",
         "1981 7th Formers.jpg",
+        "1981 Class Photos.docx",
+        "1981 Class Photos.pdf",
         "1981 Staff.jpg"
     ],
     "1982": [
@@ -858,6 +900,8 @@ const fileStructure = {
         "1982 6Jn.jpg",
         "1982 6Pr.jpg",
         "1982 6St.jpg",
+        "1982 Class Photos.docx",
+        "1982 Class Photos.pdf",
         "1982 Staff.jpg"
     ],
     "1983": [
@@ -897,6 +941,8 @@ const fileStructure = {
         "1983 6He.jpg",
         "1983 6Jn.jpg",
         "1983 6Ov.jpg",
+        "1983 Class Photos.docx",
+        "1983 Class Photos.pdf",
         "1983 Staff.jpg"
     ],
     "1984": [
@@ -937,7 +983,9 @@ const fileStructure = {
         "1984 6Jo.jpg",
         "1984 6La.jpg",
         "1984 6Sh.jpg",
-        "1984 7 Formers.jpg"
+        "1984 7 Formers.jpg",
+        "1984 Class Photos.docx",
+        "1984 Class Photos.pdf"
     ],
     "1985": [
         "1985 3Al.jpg",
@@ -977,7 +1025,9 @@ const fileStructure = {
         "1985 6Jo.jpg",
         "1985 6Mg.jpg",
         "1985 6Pr.jpg",
-        "1985 7 Formers.jpg"
+        "1985 7 Formers.jpg",
+        "1985 Class Photos.docx",
+        "1985 Class Photos.pdf"
     ],
     "1986": [
         "1986 3Al.jpg",
@@ -1017,7 +1067,9 @@ const fileStructure = {
         "1986 6Te.jpg",
         "1986 6Tu.jpg",
         "1986 6Wh.jpg",
-        "1986 7 Formers.jpg"
+        "1986 7 Formers.jpg",
+        "1986 Class Photos.docx",
+        "1986 Class Photos.pdf"
     ],
     "1987": [
         "1987 3Be.jpg",
@@ -1057,7 +1109,9 @@ const fileStructure = {
         "1987 6Mg.jpg",
         "1987 6Pr.jpg",
         "1987 6Tu.jpg",
-        "1987 6Va.jpg"
+        "1987 6Va.jpg",
+        "1987 Class Photos.docx",
+        "1987 Class Photos.pdf"
     ],
     "1988": [
         "1988 3Be.jpg",
@@ -1096,6 +1150,8 @@ const fileStructure = {
         "1988 6Ma.jpg",
         "1988 7th Formers A.jpg",
         "1988 7th Formers B.jpg",
+        "1988 Class Photos.docx",
+        "1988 Class Photos.pdf",
         "1988 Staff.jpg"
     ],
     "1989": [
@@ -1134,6 +1190,8 @@ const fileStructure = {
         "1989 6We.jpg",
         "1989 7th Formers - Part 1.jpg",
         "1989 7th Formers - Part 2.jpg",
+        "1989 Class Photos.docx",
+        "1989 Class Photos.pdf",
         "1989 Staff.jpg"
     ],
     "1990": [
@@ -1169,7 +1227,9 @@ const fileStructure = {
         "1990 6Se.jpg",
         "1990 6Sh.jpg",
         "1990 7 Formers Part 1.jpg",
-        "1990 7 Formers Part 2.jpg"
+        "1990 7 Formers Part 2.jpg",
+        "1990 Class Photos.docx",
+        "1990 Class Photos.pdf"
     ],
     "1991": [
         "1991 3Bk.jpg",
@@ -1205,7 +1265,9 @@ const fileStructure = {
         "1991 6Ro.jpg",
         "1991 6Se.jpg",
         "1991 7 Formers - Part 1.jpg",
-        "1991 7 Formers - Part 2.jpg"
+        "1991 7 Formers - Part 2.jpg",
+        "1991 Class Photos.docx",
+        "1991 Class Photos.pdf"
     ],
     "1992": [
         "1992 3Bk.jpg",
@@ -1242,7 +1304,9 @@ const fileStructure = {
         "1992 6Wh.jpg",
         "1992 7 Formers - Part 1.jpg",
         "1992 7 Formers - Part 2 v2.jpg",
-        "1992 7 Formers - Part 2.jpg"
+        "1992 7 Formers - Part 2.jpg",
+        "1992 Class Photos.docx",
+        "1992 Class Photos.pdf"
     ],
     "1993": [
         "1993 3Bl.jpg",
@@ -1277,6 +1341,8 @@ const fileStructure = {
         "1993 6Om.jpg",
         "1993 6Se.jpg",
         "1993 7th Formers.jpg",
+        "1993 Class Photos.docx",
+        "1993 Class Photos.pdf",
         "1993 Staff.jpg"
     ],
     "1994": [
@@ -1311,7 +1377,9 @@ const fileStructure = {
         "1994 6Hx.jpg",
         "1994 6Ld.jpg",
         "1994 6Ra.jpg",
-        "1994 6Ro.jpg"
+        "1994 6Ro.jpg",
+        "1994 Class Photos.docx",
+        "1994 Class Photos.pdf"
     ],
     "1995": [
         "1995 3Gl.jpg",
@@ -1348,6 +1416,8 @@ const fileStructure = {
         "1995 6Ro.jpg",
         "1995 6Wk.jpg",
         "1995 7th Formers.jpg",
+        "1995 Class Photos.docx",
+        "1995 Class Photos.pdf",
         "1995 Staff.jpg"
     ],
     "1996": [
@@ -1385,6 +1455,8 @@ const fileStructure = {
         "1996 6Sr.jpg",
         "1996 6St.jpg",
         "1996 7th Formers.jpg",
+        "1996 Class Photos.docx",
+        "1996 Class Photos.pdf",
         "1996 Staff.jpg"
     ],
     "1997": [
@@ -1420,6 +1492,8 @@ const fileStructure = {
         "1997 6Mc.jpg",
         "1997 6Pr.jpg",
         "1997 6Ra.jpg",
+        "1997 Class Photos.docx",
+        "1997 Class Photos.pdf",
         "1997 Staff.jpg"
     ],
     "1998": [
@@ -1458,6 +1532,8 @@ const fileStructure = {
         "1998 6Cr.jpg",
         "1998 6Ma.jpg",
         "1998 7th Formers.jpg",
+        "1998 Class Photos.docx",
+        "1998 Class Photos.pdf",
         "1998 Staff.jpg"
     ],
     "1999": [
@@ -1498,6 +1574,8 @@ const fileStructure = {
         "1999 6Py.jpg",
         "1999 6Wh.jpg",
         "1999 7th Formers.jpg",
+        "1999 Class Photos.docx",
+        "1999 Class Photos.pdf",
         "1999 Staff.jpg"
     ],
     "2000": [
@@ -1537,6 +1615,8 @@ const fileStructure = {
         "2000 6Ro.jpg",
         "2000 6Wt.jpg",
         "2000 7th Formers.jpg",
+        "2000 Class Photos.docx",
+        "2000 Class Photos.pdf",
         "2000 Staff.jpg"
     ],
     "2001": [
@@ -1577,6 +1657,8 @@ const fileStructure = {
         "2001 6Yg.jpg",
         "2001 7El.jpg",
         "2001 7th Formers.jpg",
+        "2001 Class Photos.docx",
+        "2001 Class Photos.pdf",
         "2001 Staff.jpg"
     ],
     "2002": [
@@ -1617,6 +1699,8 @@ const fileStructure = {
         "2002 6Wd.jpg",
         "2002 6Yg.jpg",
         "2002 7th Formers.jpg",
+        "2002 Class Photos.docx",
+        "2002 Class Photos.pdf",
         "2002 Staff v2.jpg",
         "2002 Staff.jpg"
     ],
@@ -1658,6 +1742,8 @@ const fileStructure = {
         "2003 9Mm.jpg",
         "2003 9Sf.jpg",
         "2003 9Wt.jpg",
+        "2003 Class Photos.docx",
+        "2003 Class Photos.pdf",
         "2003 Staff.jpg",
         "2003 Year 13.jpg"
     ],
@@ -1701,6 +1787,8 @@ const fileStructure = {
         "2004 9Nb.jpg",
         "2004 9Th.jpg",
         "2004 9Vn.jpg",
+        "2004 Class Photos.docx",
+        "2004 Class Photos.pdf",
         "2004 Staff.jpg"
     ],
     "2005": [
@@ -1744,6 +1832,8 @@ const fileStructure = {
         "2005 9Sf.jpg",
         "2005 9Sg.jpg",
         "2005 9Yu.jpg",
+        "2005 Class Photos WIP.docx",
+        "2005 Class Photos WIP.pdf",
         "2005 Staff.jpg"
     ],
     "2006": [
@@ -1788,7 +1878,10 @@ const fileStructure = {
         "2006 9Tr.jpg",
         "2006 9Wa.jpg",
         "2006 9Wt.jpg",
-        "2006 Staff.jpg"
+        "2006 Class Photos.docx",
+        "2006 Class Photos.pdf",
+        "2006 Staff.jpg",
+        "2006 Year 13 Students List.pdf"
     ],
     "2007": [
         "2007 10Bc.jpg",
@@ -1833,6 +1926,8 @@ const fileStructure = {
         "2007 9Py.jpg",
         "2007 9Ww.jpg",
         "2007 9Yn.jpg",
+        "2007 Class Photos.docx",
+        "2007 Class Photos.pdf",
         "2007 Staff.jpg"
     ],
     "2008": [
@@ -1881,6 +1976,8 @@ const fileStructure = {
         "2008 9Rd.jpg",
         "2008 9Sr.jpg",
         "2008 9Ts.jpg",
+        "2008 Class Photos.docx",
+        "2008 Class Photos.pdf",
         "2008 Staff.jpg"
     ],
     "2009": [
@@ -1929,6 +2026,8 @@ const fileStructure = {
         "2009 9Mt.jpg",
         "2009 9Rg.jpg",
         "2009 9Sw.jpg",
+        "2009 Class Photos.docx",
+        "2009 Class Photos.pdf",
         "2009 Staff.jpg"
     ],
     "2010": [
@@ -1975,6 +2074,8 @@ const fileStructure = {
         "2010 9Mf.jpg",
         "2010 9Mo.jpg",
         "2010 9St.jpg",
+        "2010 Class Photos.docx",
+        "2010 Class Photos.pdf",
         "2010 Staff.jpg",
         "2010 Year 13.jpg"
     ],
@@ -2022,6 +2123,8 @@ const fileStructure = {
         "2011 9Rm.jpg",
         "2011 9Rt.jpg",
         "2011 9Tt.jpg",
+        "2011 Class Photos.docx",
+        "2011 Class Photos.pdf",
         "2011 Staff.jpg",
         "2011 Year 13s.jpg"
     ],
@@ -2069,6 +2172,8 @@ const fileStructure = {
         "2012 9Wt.jpg",
         "2012 9Yg.jpg",
         "2012 9Yn.jpg",
+        "2012 Class Photos.docx",
+        "2012 Class Photos.pdf",
         "2012 Staff.jpg",
         "2012 Year 13s.jpg"
     ],
@@ -2118,6 +2223,8 @@ const fileStructure = {
         "2013 9Se.jpg",
         "2013 9So.jpg",
         "2013 9Sr.jpg",
+        "2013 Class Photos.docx",
+        "2013 Class Photos.pdf",
         "2013 Staff.jpg",
         "2013 Year 13s.jpg"
     ],
@@ -2168,6 +2275,8 @@ const fileStructure = {
         "2014 9Sw.jpg",
         "2014 9Sy.jpg",
         "2014 9Ws.jpg",
+        "2014 Class Photos.docx",
+        "2014 Class Photos.pdf",
         "2014 Staff.jpg",
         "2014 Year 13s.jpg"
     ],
@@ -2219,6 +2328,8 @@ const fileStructure = {
         "2015 9Mf.jpg",
         "2015 9Mo.jpg",
         "2015 9Re.jpg",
+        "2015 Class Photos.docx",
+        "2015 Class Photos.pdf",
         "2015 Staff.jpg"
     ],
     "2016": [
@@ -2279,6 +2390,8 @@ const fileStructure = {
         "2016 9Rmd.jpg",
         "2016 9Ryr.jpg",
         "2016 9Wsa.jpg",
+        "2016 Class Photos.docx",
+        "2016 Class Photos.pdf",
         "2016 Staff.jpg"
     ],
     "2017": [
@@ -2341,6 +2454,8 @@ const fileStructure = {
         "2017 9Rer.jpg",
         "2017 9Svc.jpg",
         "2017 9Tsm.jpg",
+        "2017 Class Photos.docx",
+        "2017 Class Photos.pdf",
         "2017 Staff.jpg"
     ],
     "2018": [
@@ -2402,6 +2517,8 @@ const fileStructure = {
         "2018 9Pzk.jpg",
         "2018 9Shm.jpg",
         "2018 9Ssr.jpg",
+        "2018 Class Photos.docx",
+        "2018 Class Photos.pdf",
         "2018 Head Prefects.jpg",
         "2018 Staff.jpg"
     ],
@@ -2465,6 +2582,8 @@ const fileStructure = {
         "2019 9Sei.jpg",
         "2019 9Shb.jpg",
         "2019 9Vtk.jpg",
+        "2019 Class Photos.docx",
+        "2019 Class Photos.pdf",
         "2019 Staff.jpg"
     ],
     "2020": [
@@ -2530,6 +2649,8 @@ const fileStructure = {
         "2020 9Moc.jpg",
         "2020 9Szc.jpg",
         "2020 9Yns.jpg",
+        "2020 Class Photos.docx",
+        "2020 Class Photos.pdf",
         "2020 Staff.jpg"
     ],
     "2021": [
@@ -2590,7 +2711,9 @@ const fileStructure = {
         "2021 9Sge.jpg",
         "2021 9Ttt.jpg",
         "2021 9Typ.jpg",
-        "2021 9Vwh.jpg"
+        "2021 9Vwh.jpg",
+        "2021 Class Photos.docx",
+        "2021 Class Photos.pdf"
     ],
     "2022": [
         "2022 10Brj.jpg",
@@ -2646,7 +2769,9 @@ const fileStructure = {
         "2022 9Kyg.jpg",
         "2022 9Mna.jpg",
         "2022 9Sei.jpg",
-        "2022 9Stk.jpg"
+        "2022 9Stk.jpg",
+        "2022 Class Photos.docx",
+        "2022 Class Photos.pdf"
     ],
     "2023": [
         "2023 10Bkm.jpg",
@@ -2699,6 +2824,8 @@ const fileStructure = {
         "2023 9Pcr.jpg",
         "2023 9Suj.jpg",
         "2023 9Wtj.jpg",
+        "2023 Class Photos.docx",
+        "2023 Class Photos.pdf",
         "2023 Staff.jpg"
     ],
     "2024": [
@@ -2751,6 +2878,8 @@ const fileStructure = {
         "2024 9Prm 2.JPEG",
         "2024 9Pvr 2.JPEG",
         "2024 9Shb 2.JPEG",
+        "2024 Class Photos.docx",
+        "2024 Class Photos.pdf",
         "2024 Staff 2.JPEG",
         "2024 Year 13 Prefects 2.JPEG"
     ],
@@ -2801,6 +2930,8 @@ const fileStructure = {
         "2025 9Rt Usj.JPEG",
         "2025 9Wh Hlt.JPEG",
         "2025 9Wh Ldj.JPEG",
+        "2025 Class Photos.docx",
+        "2025 Class Photos.pdf",
         "2025 Ko Taku Reo.JPEG",
         "2025 Staff.JPEG",
         "2025 Te Whare Awhina.JPEG"

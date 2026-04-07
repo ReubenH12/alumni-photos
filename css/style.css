@@ -1,16 +1,117 @@
 * {
-    /* margin: 0; */
+    margin: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --blue: #000047;
+}
+
+nav {
+    background-color: var(--blue);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav h2 {
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li {
+    background-color: white;
+    border-radius: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 20px 40px;
+}
+
+#home main {
+    padding: 20px;
+}
+
+#photos main {
+    display: flex;
+    flex-direction: row;
+}
+
+#year-navigation {
+    width: 20%;
+    background-color: aliceblue;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#year-navigation h3 {
+    font-size: 25px;
+}
+
+ul#year-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 15px;
 }
 
 #year-list li {
     cursor: pointer;
-    margin: 5px;
-    padding: 5px;
+    padding: 10px;
     width: min-content;
     transition-duration: 100ms;
+    background-color: aqua;
+    border-radius: 10px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #year-list li:hover {
-    scale: 1.1;
+    scale: 1.07;
+}
+
+#gallery {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    background-color:rgb(202, 190, 184);
+    align-content: flex-start;
+    padding: 40px;
+}
+
+.image-box {
+    height: min-content;
+    background-color: bisque;
+    aspect-ratio: 10/9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition-duration: 100ms;
+}
+
+.image-box:hover {
+    scale: 1.01;
 }
