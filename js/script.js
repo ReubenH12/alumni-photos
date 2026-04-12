@@ -9,7 +9,7 @@ if (document.querySelector("body").id == "photos") {
         document.getElementById("year-list").appendChild(newLi);
 
         newLi.innerHTML = year;
-        newLi.setAttribute("onclick", `openYear(${year})`)
+        newLi.addEventListener("click", () => { openYear(year) });
     }
 }
 
@@ -27,19 +27,48 @@ function openYear (year) {
 
             let newDiv = document.createElement("div");
             gallery.appendChild(newDiv);
-            newDiv.setAttribute("class", "image-box")
+            newDiv.setAttribute("class", "image-box");
+            newDiv.addEventListener("click", openImage);
 
             let newImage = document.createElement("img");
             newDiv.appendChild(newImage);
+            caption = photo.replace(/\.\w+|(\d+ )/gi, "");
             newImage.setAttribute("src", `${imageSource}/${year}/${photo}`);
+            newImage.setAttribute("alt", caption);
 
             let newP = document.createElement("p");
             newDiv.appendChild(newP);
-            caption = photo.replace(/\.\w+|(\d+ )/gi, "");
             newP.innerHTML = caption;
         }
     });
-    
+}
+
+// Setup for expanded image
+let expandedElmnt = document.getElementById("expanded-overlay");
+let expandedImage = expandedElmnt.querySelector("div > img");
+let captionElmnt = expandedElmnt.querySelector("div > p");
+let closeElmnt = expandedElmnt.querySelector("div > #close-button")
+
+
+function openImage (event) {
+    let originalImage = event.currentTarget.querySelector("img");
+    let imageSrc = originalImage.getAttribute("src");
+    let imageCaption = originalImage.getAttribute("alt");
+
+    expandedElmnt.style.display = "flex";
+
+    expandedImage.setAttribute("src", imageSrc);
+    expandedImage.setAttribute("alt", imageCaption);
+    captionElmnt.innerHTML = imageCaption;
+
+    document.addEventListener("click", closeImage, true);
+}
+
+function closeImage (event) {
+    if (!expandedElmnt.contains(event.target) || closeElmnt.contains(event.target)) {
+        expandedElmnt.removeAttribute("style");
+        document.removeEventListener("click", closeImage, true);
+    }
 }
 
 if (params.has("year")) {
