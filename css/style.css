@@ -6,6 +6,9 @@
 
 :root {
     --blue: #000047;
+	--yellow: #FFCF00;
+	--brown: #460408;
+    --pale-yellow: #FDF476;
 }
 
 nav {
@@ -53,7 +56,7 @@ nav ul li a {
 
 #year-navigation {
     width: 20%;
-    background-color: aliceblue;
+    background-color: #f3f3f3;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -74,10 +77,11 @@ ul#year-list {
 
 #year-list li {
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 12px;
     width: min-content;
     transition-duration: 100ms;
-    background-color: aqua;
+    background-color: var(--yellow);
+    color: black;
     border-radius: 10px;
     flex-grow: 1;
     display: flex;
@@ -89,19 +93,48 @@ ul#year-list {
     scale: 1.07;
 }
 
+div#year-field {
+    display: flex;
+    justify-content: space-between;
+}
+
+div#year-field input#year-input {
+    width: 69%;
+    font-size: 17px;
+}
+
+div#year-field span#select-year{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    width: 25%;
+    background-color: #460408;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 100ms;
+}
+
+div#year-field span#select-year:hover {
+    scale: 1.02;
+}
+
 #gallery {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    background-color:rgb(202, 190, 184);
+    background-color: white;
     align-content: flex-start;
     padding: 40px;
 }
 
 .image-box {
     height: min-content;
-    background-color: bisque;
+    background-color: var(--pale-yellow);
     aspect-ratio: 10/9;
     display: flex;
     flex-direction: column;
@@ -123,7 +156,6 @@ ul#year-list {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
 }
 
 #expanded-image {
@@ -132,13 +164,12 @@ ul#year-list {
     left: 20%;
     width: 60%;
     padding: 20px;
-    background-color: bisque;
+    background-color: var(--pale-yellow);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
-    pointer-events: initial;
     box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
 }
 
@@ -148,15 +179,11 @@ ul#year-list {
     top: 10px;
     font-size: 30px;
     font-weight: 500;
-    background-color: bisque;
+    background-color: var(--brown);
+    color: white;
     border-radius: 25px;
     padding: 13px 25px;
     cursor: pointer;
-    transition-duration: 70ms;
-}
-
-#expanded-image #close-button:hover {
-    scale: 1.01;
 }
 
 #expanded-image img {

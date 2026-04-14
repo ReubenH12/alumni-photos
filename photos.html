@@ -18,7 +18,12 @@
     </nav>
     <main>
         <section id="year-navigation">
-            <h3>Browse years</h3>
+            <label for="year-input"><h3>Browse or enter year:</h3></label>
+            <div id="year-field">
+                <input list="years" id="year-input" name="year-input">
+                <span id="select-year">Go</span>
+            </div>
+            <datalist id="years"></datalist>
             <ul id="year-list"></ul>
         </section>
         <section id="gallery"></section>

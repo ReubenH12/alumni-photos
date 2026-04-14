@@ -3,6 +3,8 @@ const imageSource = "https://photos.alumni.rjh.nz";
 const url = new URL(window.location.href);
 const params = new URLSearchParams(window.location.search);
 
+
+let yearList = document.getElementById("years");
 if (document.querySelector("body").id == "photos") {
     for (const year in fileStructure) {
         let newLi = document.createElement("li");
@@ -10,6 +12,12 @@ if (document.querySelector("body").id == "photos") {
 
         newLi.innerHTML = year;
         newLi.addEventListener("click", () => { openYear(year) });
+
+        // For list dropdown 
+        let newOption = document.createElement("option");
+        yearList.appendChild(newOption);
+        newOption.setAttribute("value", year);
+        newOption.innerHTML = year;
     }
 }
 
@@ -49,8 +57,10 @@ let expandedImage = expandedElmnt.querySelector("div > img");
 let captionElmnt = expandedElmnt.querySelector("div > p");
 let closeElmnt = expandedElmnt.querySelector("div > #close-button")
 
+expandedElmnt.addEventListener("click", closeImage);
 
 function openImage (event) {
+
     let originalImage = event.currentTarget.querySelector("img");
     let imageSrc = originalImage.getAttribute("src");
     let imageCaption = originalImage.getAttribute("alt");
@@ -60,16 +70,19 @@ function openImage (event) {
     expandedImage.setAttribute("src", imageSrc);
     expandedImage.setAttribute("alt", imageCaption);
     captionElmnt.innerHTML = imageCaption;
-
-    document.addEventListener("click", closeImage, true);
 }
 
 function closeImage (event) {
-    if (!expandedElmnt.contains(event.target) || closeElmnt.contains(event.target)) {
+    if (event.target == expandedElmnt || event.target == closeElmnt) {
         expandedElmnt.removeAttribute("style");
-        document.removeEventListener("click", closeImage, true);
     }
 }
+
+let yearInput = document.getElementById("year-input");
+let selectYearButton = document.getElementById("select-year");
+selectYearButton.addEventListener("click", () => { 
+    if (fileStructure.hasOwnProperty(yearInput.value)) { openYear(yearInput.value) } 
+});
 
 if (params.has("year")) {
     openYear(params.get("year"));
