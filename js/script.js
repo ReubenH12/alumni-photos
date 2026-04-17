@@ -1,14 +1,19 @@
-const imageSource = "https://photos.alumni.rjh.nz";
+// const imageSource = "https://photos.alumni.rjh.nz";
 // const imageSource = "./images/Years";
+const imageSource = "R:/Reuben/alumni-photos";
 const url = new URL(window.location.href);
 const params = new URLSearchParams(window.location.search);
+let previousYear = Object.keys(fileStructure)[0];
 
 
-let yearList = document.getElementById("years");
+let yearButtonList = document.getElementById("year-button-list")
+let yearList = document.getElementById("year-list");
+
 if (document.querySelector("body").id == "photos") {
     for (const year in fileStructure) {
         let newLi = document.createElement("li");
-        document.getElementById("year-list").appendChild(newLi);
+        newLi.setAttribute("id", `button-${year}`)
+        yearButtonList.appendChild(newLi);
 
         newLi.innerHTML = year;
         newLi.addEventListener("click", () => { openYear(year) });
@@ -26,8 +31,19 @@ function openYear (year) {
     url.searchParams.set('year', year);
     window.history.pushState({}, '', url);
 
-    gallery = document.getElementById("gallery");
-    
+    document.getElementById(`button-${previousYear}`).classList.remove("selected");
+    document.getElementById(`button-${year}`).classList.add("selected");
+    previousYear = year;
+
+    let yearTitle = document.getElementById("year-title");
+    yearTitle.querySelector("h2").innerHTML = year;
+    yearTitle.querySelector("p").innerHTML = `Download PDF for ${year} class photos:`;
+
+    let pdfDownload = yearTitle.querySelector("#pdf-download");
+    yearTitle.querySelector("div.balancer").style.width = `${pdfDownload.offsetWidth}px`;
+    pdfDownload.querySelector("a").setAttribute("href", `${imageSource}/${year}/${year} Class Photos.pdf`);
+
+    let gallery = document.getElementById("gallery");
     gallery.innerHTML = "";
 
     fileStructure[year].forEach(photo => {
@@ -36,6 +52,7 @@ function openYear (year) {
             let newDiv = document.createElement("div");
             gallery.appendChild(newDiv);
             newDiv.setAttribute("class", "image-box");
+            newDiv.setAttribute("title", `Open ${photo}`);
             newDiv.addEventListener("click", openImage);
 
             let newImage = document.createElement("img");
@@ -73,7 +90,7 @@ function openImage (event) {
 }
 
 function closeImage (event) {
-    if (event.target == expandedElmnt || event.target == closeElmnt) {
+    if (event.target == expandedElmnt || closeElmnt.contains(event.target)) {
         expandedElmnt.removeAttribute("style");
     }
 }
@@ -81,7 +98,7 @@ function closeImage (event) {
 let yearInput = document.getElementById("year-input");
 let selectYearButton = document.getElementById("select-year");
 selectYearButton.addEventListener("click", () => { 
-    if (fileStructure.hasOwnProperty(yearInput.value)) { openYear(yearInput.value) } 
+    if (fileStructure.hasOwnProperty(yearInput.value)) { openYear(yearInput.value) }
 });
 
 if (params.has("year")) {

@@ -19,7 +19,7 @@ nav {
     align-items: center;
 }
 
-nav h2 {
+nav h1 {
     font-weight: 800;
     font-size: 30px;
     color: white;
@@ -49,7 +49,7 @@ nav ul li a {
     padding: 20px;
 }
 
-#photos main {
+.flex-row {
     display: flex;
     flex-direction: row;
 }
@@ -67,7 +67,7 @@ nav ul li a {
     font-size: 25px;
 }
 
-ul#year-list {
+ul#year-button-list {
     list-style: none;
     padding: 0;
     display: grid;
@@ -75,11 +75,11 @@ ul#year-list {
     gap: 15px;
 }
 
-#year-list li {
+#year-button-list li {
     cursor: pointer;
     padding: 10px 12px;
     width: min-content;
-    transition-duration: 100ms;
+    transition: scale 100ms;
     background-color: var(--yellow);
     color: black;
     border-radius: 10px;
@@ -89,21 +89,26 @@ ul#year-list {
     align-items: center;
 }
 
-#year-list li:hover {
+#year-button-list li.selected {
+    background-color: var(--brown);
+    color: white;
+}
+
+#year-button-list li:hover {
     scale: 1.07;
 }
 
-div#year-field {
+#year-field {
     display: flex;
     justify-content: space-between;
 }
 
-div#year-field input#year-input {
+#year-field input#year-input {
     width: 69%;
     font-size: 17px;
 }
 
-div#year-field span#select-year{
+#year-field span#select-year{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,18 +123,57 @@ div#year-field span#select-year{
     transition-duration: 100ms;
 }
 
-div#year-field span#select-year:hover {
+#year-field span#select-year:hover {
     scale: 1.02;
 }
 
-#gallery {
+#photos main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     width: 80%;
+    padding: 40px;
+}
+
+#year-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#year-title h2 {
+    font-size: 50px;
+}
+
+#pdf-download {
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#download-button {
+    padding: 10px 11px;
+    display: block;
+}
+
+#download-button svg {
+    width: 40px;
+    height: 40px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+    stroke: var(--brown);
+    fill: none;
+}
+
+#gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     background-color: white;
     align-content: flex-start;
-    padding: 40px;
+    /* padding: 0 40px 40px; */
 }
 
 .image-box {
@@ -151,7 +195,7 @@ div#year-field span#select-year:hover {
 
 #expanded-overlay {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -177,13 +221,16 @@ div#year-field span#select-year:hover {
     position: absolute;
     right: 10px;
     top: 10px;
-    font-size: 30px;
-    font-weight: 500;
-    background-color: var(--brown);
-    color: white;
-    border-radius: 25px;
-    padding: 13px 25px;
+    padding: 25px;
     cursor: pointer;
+}
+
+#expanded-image svg {
+    width: 70px;
+    height: 70px;
+    stroke-linecap: round;
+    stroke-width: 3px;
+    stroke: var(--brown);
 }
 
 #expanded-image img {

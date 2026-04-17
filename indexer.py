@@ -4,8 +4,8 @@ import json
 
 filesystem = dict()
 
-for year in Path("images/Years").iterdir():
-    path = "images/Years/" + year.name
+for year in Path("R:/Reuben/alumni-photos").iterdir():
+    path = "R:/Reuben/alumni-photos/" + year.name
     filesystem[year.name] = glob.glob("*.*", root_dir=path)
 
 for key in filesystem:
