@@ -1,6 +1,6 @@
-// const imageSource = "https://photos.alumni.rjh.nz";
+const imageSource = "https://photos.alumni.rjh.nz";
 // const imageSource = "./images/Years";
-const imageSource = "R:/Reuben/alumni-photos";
+// const imageSource = "R:/Reuben/alumni-photos";
 const url = new URL(window.location.href);
 const params = new URLSearchParams(window.location.search);
 let previousYear = Object.keys(fileStructure)[0];
