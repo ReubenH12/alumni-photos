@@ -1,29 +1,26 @@
 const imageSource = "https://photos.alumni.rjh.nz";
-// const imageSource = "./images/Years";
-// const imageSource = "R:/Reuben/alumni-photos";
 const url = new URL(window.location.href);
 const params = new URLSearchParams(window.location.search);
 let previousYear = Object.keys(fileStructure)[0];
 
+if (document.querySelector("body").id === "photos") {
 
-let yearButtonList = document.getElementById("year-button-list")
-let yearList = document.getElementById("year-list");
+const yearButtonList = document.getElementById("year-button-list")
+const yearList = document.getElementById("year-list");
 
-if (document.querySelector("body").id == "photos") {
-    for (const year in fileStructure) {
-        let newLi = document.createElement("li");
-        newLi.setAttribute("id", `button-${year}`)
-        yearButtonList.appendChild(newLi);
+for (const year in fileStructure) {
+    const newLi = document.createElement("li");
+    newLi.setAttribute("id", `button-${year}`)
+    yearButtonList.appendChild(newLi);
 
-        newLi.innerHTML = year;
-        newLi.addEventListener("click", () => { openYear(year) });
+    newLi.innerHTML = year;
+    newLi.addEventListener("click", () => { openYear(year) });
 
-        // For list dropdown 
-        let newOption = document.createElement("option");
-        yearList.appendChild(newOption);
-        newOption.setAttribute("value", year);
-        newOption.innerHTML = year;
-    }
+    // For list dropdown 
+    const newOption = document.createElement("option");
+    yearList.appendChild(newOption);
+    newOption.setAttribute("value", year);
+    newOption.innerHTML = year;
 }
 
 function openYear (year) {
@@ -35,33 +32,33 @@ function openYear (year) {
     document.getElementById(`button-${year}`).classList.add("selected");
     previousYear = year;
 
-    let yearTitle = document.getElementById("year-title");
+    const yearTitle = document.getElementById("year-title");
     yearTitle.querySelector("h2").innerHTML = year;
     yearTitle.querySelector("p").innerHTML = `Download PDF for ${year} class photos:`;
 
-    let pdfDownload = yearTitle.querySelector("#pdf-download");
+    const pdfDownload = yearTitle.querySelector("#pdf-download");
     yearTitle.querySelector("div.balancer").style.width = `${pdfDownload.offsetWidth}px`;
     pdfDownload.querySelector("a").setAttribute("href", `${imageSource}/${year}/${year} Class Photos.pdf`);
 
-    let gallery = document.getElementById("gallery");
+    const gallery = document.getElementById("gallery");
     gallery.innerHTML = "";
 
     fileStructure[year].forEach(photo => {
-        if (/.jpg|.jpeg/i.test(photo)) {
+        if (/.+\.jpg/.test(photo)) {
 
-            let newDiv = document.createElement("div");
+            const newDiv = document.createElement("div");
             gallery.appendChild(newDiv);
             newDiv.setAttribute("class", "image-box");
             newDiv.setAttribute("title", `Open ${photo}`);
-            newDiv.addEventListener("click", openImage);
+            newDiv.addEventListener("click", openPhoto);
 
-            let newImage = document.createElement("img");
+            const newImage = document.createElement("img");
             newDiv.appendChild(newImage);
             caption = photo.replace(/\.\w+|(\d+ )/gi, "");
             newImage.setAttribute("src", `${imageSource}/${year}/${photo}`);
             newImage.setAttribute("alt", caption);
 
-            let newP = document.createElement("p");
+            const newP = document.createElement("p");
             newDiv.appendChild(newP);
             newP.innerHTML = caption;
         }
@@ -69,40 +66,99 @@ function openYear (year) {
 }
 
 // Setup for expanded image
-let expandedElmnt = document.getElementById("expanded-overlay");
-let expandedImage = expandedElmnt.querySelector("div > img");
-let captionElmnt = expandedElmnt.querySelector("div > p");
-let closeElmnt = expandedElmnt.querySelector("div > #close-button")
+const expandedElmnt = document.getElementById("expanded-overlay");
+// const popupElmnt = document.getElementById("expanded-image");
+const expandedImage = expandedElmnt.querySelector("div > img");
+const captionElmnt = expandedElmnt.querySelector("div > p");
+const closeElmnt = expandedElmnt.querySelector("div > #close-button");
 
-expandedElmnt.addEventListener("click", closeImage);
+expandedElmnt.addEventListener("click", closePhoto);
 
-function openImage (event) {
+const leftButton = expandedElmnt.querySelector("#left-button");
+const rightButton = expandedElmnt.querySelector("#right-button");
 
-    let originalImage = event.currentTarget.querySelector("img");
-    let imageSrc = originalImage.getAttribute("src");
-    let imageCaption = originalImage.getAttribute("alt");
+leftButton.addEventListener("click", switchPhoto);
+rightButton.addEventListener("click", switchPhoto);
+
+let originalImage;
+
+function openPhoto (event) {
+
+    originalImage = event.currentTarget.querySelector("img");
+    const imageSrc = originalImage.getAttribute("src");
+    const imageCaption = originalImage.getAttribute("alt");
 
     expandedElmnt.style.display = "flex";
 
     expandedImage.setAttribute("src", imageSrc);
     expandedImage.setAttribute("alt", imageCaption);
     captionElmnt.innerHTML = imageCaption;
+
+    ["next", "previous"].forEach(function (direction) {
+        const isNext = direction === "next";
+
+        const sibling = isNext ? originalImage.parentElement.nextElementSibling : originalImage.parentElement.previousElementSibling;
+        const button = isNext ? rightButton : leftButton;
+
+        if (sibling) {
+            button.style.display = "initial";
+            const adjacentPhotoName = sibling.querySelector("p").innerHTML;
+            button.setAttribute("title", `Go to ${direction} photo: ${adjacentPhotoName}`);
+        } else {
+            button.style.display = "none";
+        }
+    })
 }
 
-function closeImage (event) {
-    if (event.target == expandedElmnt || closeElmnt.contains(event.target)) {
+function closePhoto (event) {
+    if (event.target === expandedElmnt || closeElmnt.contains(event.target)) {
         expandedElmnt.removeAttribute("style");
     }
 }
 
-let yearInput = document.getElementById("year-input");
-let selectYearButton = document.getElementById("select-year");
+function switchPhoto (event) {
+    
+    const direction = event.currentTarget.getAttribute("id").replace("-button", "");
+
+    if (direction === "right") {
+        originalImage.parentElement.nextElementSibling.click();
+    } else {
+        originalImage.parentElement.previousElementSibling.click();
+    }
+}
+
+const yearInput = document.getElementById("year-input");
+const selectYearButton = document.getElementById("select-year");
 selectYearButton.addEventListener("click", () => { 
-    if (fileStructure.hasOwnProperty(yearInput.value)) { openYear(yearInput.value) }
+    if (fileStructure.hasOwnProperty(yearInput.value)) {
+        openYear(yearInput.value);
+        yearInput.value = "";
+    }
 });
 
 if (params.has("year")) {
     openYear(params.get("year"));
 } else {
-    openYear(1976);
+    openYear(2025);
 }
+
+}
+
+
+const linksBox = document.getElementById("external-links");
+const logoBox = document.getElementById("footer-logo");
+
+let smallBox;
+let bigBox;
+
+if (linksBox.offsetWidth > logoBox.offsetWidth) {
+    smallBox = logoBox;
+    bigBox = linksBox;
+} else {
+    smallBox = linksBox;
+    bigBox = logoBox;
+}
+
+// document.fonts.ready.then(() => {
+    smallBox.style.width = `${bigBox.offsetWidth}px`;
+// });

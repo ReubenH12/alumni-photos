@@ -46,12 +46,11 @@ nav ul li a {
 }
 
 #home main {
-    padding: 20px;
+    padding: 60px 500px;
 }
 
 .flex-row {
     display: flex;
-    flex-direction: row;
 }
 
 #year-navigation {
@@ -173,7 +172,6 @@ ul#year-button-list {
     gap: 20px;
     background-color: white;
     align-content: flex-start;
-    /* padding: 0 40px 40px; */
 }
 
 .image-box {
@@ -206,8 +204,8 @@ ul#year-button-list {
     position: fixed;
     top: 10%;
     left: 20%;
-    width: 60%;
-    padding: 20px;
+    width: 70%;
+    padding: 50px;
     background-color: var(--pale-yellow);
     border-radius: 20px;
     display: flex;
@@ -217,22 +215,101 @@ ul#year-button-list {
     box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
 }
 
-#expanded-image #close-button {
+#close-button {
     position: absolute;
-    right: 10px;
-    top: 10px;
-    padding: 25px;
+    right: 0;
+    top: 0;
+    padding: 0 0 15px 15px;
     cursor: pointer;
 }
 
-#expanded-image svg {
+#close-button svg {
+    width: 50px;
+    height: 50px;
+}
+
+.switch-photo {
+    position: absolute;
+    padding: 5px;
+    top: calc(50% - 70px);
+    cursor: pointer;
     width: 70px;
     height: 70px;
+}
+
+#left-button {
+    left: -12px;
+}
+
+#right-button {
+    right: -12px;
+}
+
+#expanded-image svg {
     stroke-linecap: round;
+    stroke-linejoin: round;
     stroke-width: 3px;
     stroke: var(--brown);
+    fill: none;
 }
 
 #expanded-image img {
     width: 100%;
+    user-select: none;
+}
+
+footer {
+	background-color: var(--blue);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 40px;
+}
+
+footer p {
+	color: white;
+	font-size: 20px;
+}
+
+footer #footer-logo {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	text-decoration: none;
+}
+
+footer #footer-logo img {
+	height: 48px;
+}
+
+footer #attribution {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+footer #external-links {
+	display: flex;
+	flex-direction: row;
+	gap: 37px;
+	justify-content: end;
+	align-items: end;
+}
+
+footer #external-links a {
+	display: flex;
+	gap: 12px;
+	color: white;
+}
+
+footer #external-links svg {
+	width: 24px;
+	height: 24px;
+	fill: none;
+	stroke: white;
+	stroke-width: 2px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
 }
