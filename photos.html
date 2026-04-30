@@ -10,14 +10,25 @@
 </head>
 <body id="photos">
     <nav>
-        <h1>Tawa College Alumni - Class Photos</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="photos.html">Photos</a></li>
-        </ul>
+        <h1 class="wide-head">Tawa College Alumni - Class Photos</h1>
+        <h1 class="narrow-head">Tawa College Alumni<br>Class Photos</h1>
+
+        <div id="hamburger">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </div>
+
+        <div id="menu">
+            <p>Menu</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="photos.html">Photos</a></li>
+            </ul>
+        </div>
     </nav>
     <div class="flex-row">
-        <aside id="year-navigation">
+        <aside class="contracted">
             <label for="year-input"><h3>Browse or enter year:</h3></label>
             <div id="year-field">
                 <input list="years" id="year-input" name="year-input">
@@ -25,6 +36,11 @@
             </div>
             <datalist id="year-list"></datalist>
             <ul id="year-button-list"></ul>
+            <div id="year-list-gradient">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
         </aside>
         <main>
             <div id="year-title">

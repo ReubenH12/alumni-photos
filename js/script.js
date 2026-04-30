@@ -1,4 +1,5 @@
 const imageSource = "https://photos.alumni.rjh.nz";
+// const imageSource = "R:/Reuben/alumni-photos";
 const url = new URL(window.location.href);
 const params = new URLSearchParams(window.location.search);
 let previousYear = Object.keys(fileStructure)[0];
@@ -67,7 +68,6 @@ function openYear (year) {
 
 // Setup for expanded image
 const expandedElmnt = document.getElementById("expanded-overlay");
-// const popupElmnt = document.getElementById("expanded-image");
 const expandedImage = expandedElmnt.querySelector("div > img");
 const captionElmnt = expandedElmnt.querySelector("div > p");
 const closeElmnt = expandedElmnt.querySelector("div > #close-button");
@@ -91,6 +91,7 @@ function openPhoto (event) {
     expandedElmnt.style.display = "flex";
 
     expandedImage.setAttribute("src", imageSrc);
+    expandedImage.setAttribute("title", imageCaption)
     expandedImage.setAttribute("alt", imageCaption);
     captionElmnt.innerHTML = imageCaption;
 
@@ -159,6 +160,27 @@ if (linksBox.offsetWidth > logoBox.offsetWidth) {
     bigBox = logoBox;
 }
 
-// document.fonts.ready.then(() => {
+document.fonts.ready.then(() => {
     smallBox.style.width = `${bigBox.offsetWidth}px`;
-// });
+});
+
+
+document.getElementById("year-list-gradient").addEventListener("click", () => {
+    document.querySelector("#photos aside").classList.toggle("contracted");
+});
+
+
+// navMenuOn = false
+hamburgerButton = document.getElementById("hamburger");
+navMenu = document.getElementById("menu");
+
+hamburgerButton.addEventListener("click", function() {
+    // if (navMenuOn == false) {
+    //     navMenuOn = true
+    //     drawIndicatorLine(10);
+    // } else {
+    //     navMenuOn = false
+    // }
+
+    navMenu.classList.toggle("opened")
+});
