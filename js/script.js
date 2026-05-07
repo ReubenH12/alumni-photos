@@ -70,7 +70,7 @@ function openYear (year) {
 const expandedElmnt = document.getElementById("expanded-overlay");
 const expandedImage = expandedElmnt.querySelector("div > img");
 const captionElmnt = expandedElmnt.querySelector("div > p");
-const closeElmnt = expandedElmnt.querySelector("div > #close-button");
+const closeElmnt = document.getElementById("close-button");
 
 expandedElmnt.addEventListener("click", closePhoto);
 
@@ -89,6 +89,9 @@ function openPhoto (event) {
     const imageCaption = originalImage.getAttribute("alt");
 
     expandedElmnt.style.display = "flex";
+    document.querySelectorAll("nav, body > .flex-row, footer").forEach(function (elmnt) {
+        elmnt.style.filter = "blur(4px)";
+    })
 
     expandedImage.setAttribute("src", imageSrc);
     expandedImage.setAttribute("title", imageCaption)
@@ -114,6 +117,10 @@ function openPhoto (event) {
 function closePhoto (event) {
     if (event.target === expandedElmnt || closeElmnt.contains(event.target)) {
         expandedElmnt.removeAttribute("style");
+
+        document.querySelectorAll("nav, body > .flex-row, footer").forEach(function (elmnt) {
+            elmnt.style.filter = "";
+        });
     }
 }
 
@@ -143,6 +150,22 @@ if (params.has("year")) {
     openYear(2025);
 }
 
+
+document.getElementById("year-list-gradient").addEventListener("click", () => {
+    document.querySelector("#photos aside").classList.toggle("contracted");
+});
+
+
+function getScrollbarWidth() {
+    const elmnt = document.createElement("div");
+    elmnt.style.overflow = "scroll";
+    document.body.appendChild(elmnt);
+    const width = elmnt.offsetWidth - elmnt.clientWidth;
+    elmnt.remove();
+    return width;
+}
+
+
 }
 
 
@@ -165,22 +188,12 @@ document.fonts.ready.then(() => {
 });
 
 
-document.getElementById("year-list-gradient").addEventListener("click", () => {
-    document.querySelector("#photos aside").classList.toggle("contracted");
-});
-
-
 // navMenuOn = false
 hamburgerButton = document.getElementById("hamburger");
 navMenu = document.getElementById("menu");
 
 hamburgerButton.addEventListener("click", function() {
-    // if (navMenuOn == false) {
-    //     navMenuOn = true
-    //     drawIndicatorLine(10);
-    // } else {
-    //     navMenuOn = false
-    // }
-
-    navMenu.classList.toggle("opened")
+    navMenu.classList.toggle("opened");
 });
+
+document.querySelectorAll(".image-box")[22].click()
