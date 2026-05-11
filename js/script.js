@@ -196,4 +196,3 @@ hamburgerButton.addEventListener("click", function() {
     navMenu.classList.toggle("opened");
 });
 
-document.querySelectorAll(".image-box")[22].click()
