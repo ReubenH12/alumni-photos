@@ -89,9 +89,7 @@ function openPhoto (event) {
     const imageCaption = originalImage.getAttribute("alt");
 
     expandedElmnt.style.display = "flex";
-    document.querySelectorAll("nav, body > .flex-row, footer").forEach(function (elmnt) {
-        elmnt.style.filter = "blur(4px)";
-    })
+    expandedElmnt.style.backdropFilter = "blur(4px)"
 
     expandedImage.setAttribute("src", imageSrc);
     expandedImage.setAttribute("title", imageCaption)
@@ -105,11 +103,11 @@ function openPhoto (event) {
         const button = isNext ? rightButton : leftButton;
 
         if (sibling) {
-            button.style.display = "initial";
+            button.style.visibility = "";
             const adjacentPhotoName = sibling.querySelector("p").innerHTML;
             button.setAttribute("title", `Go to ${direction} photo: ${adjacentPhotoName}`);
         } else {
-            button.style.display = "none";
+            button.style.visibility = "hidden";
         }
     })
 }
@@ -117,10 +115,6 @@ function openPhoto (event) {
 function closePhoto (event) {
     if (event.target === expandedElmnt || closeElmnt.contains(event.target)) {
         expandedElmnt.removeAttribute("style");
-
-        document.querySelectorAll("nav, body > .flex-row, footer").forEach(function (elmnt) {
-            elmnt.style.filter = "";
-        });
     }
 }
 
@@ -195,4 +189,3 @@ navMenu = document.getElementById("menu");
 hamburgerButton.addEventListener("click", function() {
     navMenu.classList.toggle("opened");
 });
-
