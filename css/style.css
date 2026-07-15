@@ -495,6 +495,13 @@ ul#year-button-list {
     scale: 1.01;
 }
 
+@media (max-width: 639px) {
+    .image-box {
+        aspect-ratio: initial;
+        gap: 10px;
+    }
+}
+
 @media (max-width: 350px) {
     #gallery {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -508,6 +515,7 @@ ul#year-button-list {
 
 #expanded-overlay {
     display: none;
+    z-index: 1;
     position: fixed;
     flex-direction: column;
     align-items: center;
@@ -530,7 +538,6 @@ ul#year-button-list {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
-    /* gap: 10px; */
 }
 
 #expanded-image img {
@@ -605,6 +612,10 @@ ul#year-button-list {
 
     #expanded-image img {
         height: auto;
+    }
+
+    #expanded-image p {
+        padding-top: 10px;
     }
 }
 

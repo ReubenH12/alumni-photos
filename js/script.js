@@ -1,4 +1,4 @@
-const imageSource = "https://photos.alumni.rjh.nz";
+const imageSource = "https://photosbucket.tawacollegealumni.co.nz";
 // const imageSource = "R:/Reuben/alumni-photos";
 const url = new URL(window.location.href);
 const params = new URLSearchParams(window.location.search);
