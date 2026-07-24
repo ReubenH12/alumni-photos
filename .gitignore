@@ -2,3 +2,10 @@ images/Years
 images/*.svg
 images/*.ai
 indexedPhotos.json
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
