@@ -9,7 +9,7 @@
     --blue: #000047;
 	--yellow: #FFCF00;
 	--brown: #460408;
-    --pale-yellow: #FDF476;
+    --pale-blue: #C4C4D4;
 }
 
 body > * {
@@ -480,7 +480,7 @@ ul#year-button-list {
 
 .image-box {
     height: min-content;
-    background-color: var(--pale-yellow);
+    background-color: var(--pale-blue);
     aspect-ratio: 10/9;
     display: flex;
     flex-direction: column;
@@ -532,7 +532,7 @@ ul#year-button-list {
     height: 80%;
     padding: 50px;
     padding-bottom: 30px;
-    background-color: var(--pale-yellow);
+    background-color: var(--pale-blue);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
